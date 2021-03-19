@@ -11,7 +11,6 @@ let TagsRepository = class TagsRepository extends repository_1.DefaultCrudReposi
         super(models_1.Tags, dataSource);
         this.picturesRepositoryGetter = picturesRepositoryGetter;
         this.pictures = this.createHasManyRepositoryFactoryFor('pictures', picturesRepositoryGetter);
-        this.registerInclusionResolver('pictures', this.pictures.inclusionResolver);
     }
 };
 TagsRepository = tslib_1.__decorate([

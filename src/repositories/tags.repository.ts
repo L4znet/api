@@ -17,6 +17,5 @@ export class TagsRepository extends DefaultCrudRepository<
   ) {
     super(Tags, dataSource);
     this.pictures = this.createHasManyRepositoryFactoryFor('pictures', picturesRepositoryGetter,);
-    this.registerInclusionResolver('pictures', this.pictures.inclusionResolver);
   }
 }
